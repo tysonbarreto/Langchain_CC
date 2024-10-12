@@ -1,0 +1,60 @@
+[project]
+name = "langchain_cc"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "tysonbarretto", email = "tysonbarretto1991@gmail.com"},
+]
+dependencies = [
+    "langchain>=0.3.3",
+    "langchain-openai>=0.2.2",
+    "langchain-community>=0.3.2",
+    "firestore>=0.0.8",
+    "chromadb>=0.5.12",
+    "tiktoken>=0.8.0",
+    "sentence-transformers>=3.1.1",
+    "bs4>=0.0.2",
+    "firecrawl-py>=1.2.4",
+    "langchainhub>=0.1.21",
+    "wikipedia>=1.4.0",
+    "tavily-python>=0.5.0",
+    "langchain-google-firestore>=0.4.0",
+    "langchain-chroma>=0.1.4",
+    "langchain-huggingface>=0.1.0",
+]
+requires-python = ">=3.10.0,<3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.scripts]
+
+basic_chat_model="chat_models/chat_model_basic.py"
+basic_chat_conversation="chat_models/chat_model_conversation.py"
+basic_chat_conversation_history="chat_models/chat_model_conversation_save_history.py"
+
+basic_prompt="prompt_models/prompt_template_basic.py"
+basic_prompt_with_chat = "prompt_models/prompt_template_with_chat.py"
+
+basic_chain = "chains/chain_basics.py"
+chains_under_the_hood = "chains/chains_under_the_hood.py"
+chains_extended = "chains/chains_extended.py"
+chains_parallel = "chains/chains_parallel.py"
+chains_branching = "chains/chains_branching.py"
+
+basic_rag = "rag/rag_basics.py"
+rag_with_metadata = "rag/rag_with_metadata.py"
+rag_text_splitting = "rag/rag_text_splittings.py"
+rag_embedding = "rag/rag_embeddings.py"
+rag_retriever = "rag/rag_retrievers.py"
+rag_one_off_question = "rag/rag_one_off_question.py"
+rag_conversational = "rag/rag_conversational.py"
+rag_webscrapping = "rag/rag_webscrapping.py"
+
+agent_basics = "agents/agents_basics.py"
+agent_react_chat = "agents/agents_react_chat.py"
+agent_react_datastore = "agents/agents_react_datastore.py"
+
+
+
+[tool.pdm]
+distribution = false
