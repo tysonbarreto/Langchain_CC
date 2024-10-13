@@ -21,6 +21,7 @@ dependencies = [
     "langchain-google-firestore>=0.4.0",
     "langchain-chroma>=0.1.4",
     "langchain-huggingface>=0.1.0",
+    "streamlit>=1.39.0",
 ]
 requires-python = ">=3.10.0,<3.12"
 readme = "README.md"
@@ -54,7 +55,7 @@ agent_basics = "agents/agents_basics.py"
 agent_react_chat = "agents/agents_react_chat.py"
 agent_react_datastore = "agents/agents_react_datastore.py"
 
-
+tools_constructor= "tools/tool_constructor.py"
 
 [tool.pdm]
 distribution = false
